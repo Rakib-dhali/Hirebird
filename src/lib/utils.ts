@@ -14,7 +14,7 @@ export function formatDate(dateString: string): string {
   });
 }
 
-export function formatSalary(min?: number, max?: number): string | null {
+export function formatSalary(min?: number | null, max?: number | null): string | null {
   if (!min && !max) return null;
   const fmt = (n: number) =>
     n >= 1000 ? `$${(n / 1000).toFixed(0)}k` : `$${n}`;
